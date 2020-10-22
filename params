@@ -1,0 +1,25 @@
+# Cascade collector parameter file. Do not use spaces around =.
+
+[kafka]
+brokers=localhost:9092
+
+[topic]
+# The topic on which to listen for the tweets
+in=tweets
+# The topic on which to produce the partial series
+out_series=cascade_series
+# The topic on which to produce the cascade properties
+out_properties=cascade_properties
+
+[times]
+# Times for producing the partial cascades (timestamp)
+observation=600
+observation=1200
+
+# Time to consider the cascade is over (timestamp)
+terminated=1800
+
+[cascade]
+# This is the minimal number of tweets an a cascade. A cascade with
+# less tweets is ignored.
+min_cascade_size=10
