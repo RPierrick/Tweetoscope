@@ -1,0 +1,3 @@
+Pour compiler le tweet generator : g++ -o tweet-generator -O3 -Wall -std=c++17 `pkg-config --libs --cflags gaml cppkafka` -lpthread tweet-generator.cpp
+
+sudo ./tweet-generator params.config
